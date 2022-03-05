@@ -23,7 +23,7 @@ import org.openqa.selenium.support.PageFactory;
 	public WebElement f;*/
 	
 	@FindBy(how = How.XPATH , using = "//*[@id=\"ap_email\"]")
-	public WebElement accountEmail;
+	public WebElement loginEmail;
 	
 	@FindBy(how = How.XPATH , using = "//*[@id=\"continue\"]")
 	public WebElement nextPage;
@@ -35,14 +35,14 @@ import org.openqa.selenium.support.PageFactory;
 	public WebElement submitSignIn;
 	
 	
-	public void enterSignIn() {
+	public void enterSignInButton() {
 		
 		accountSign.click();
 	}
 	
 	public void enterEmail() {
 		
-		accountEmail.sendKeys("6295907017");
+		loginEmail.sendKeys("6295907017");
 	}
 	
     public void continueToNextPage() {

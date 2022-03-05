@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest{
 	public void login() {
 		
 		LoginPage login = new LoginPage(driver);
-		login.enterSignIn();
+		login.enterSignInButton();
 		login.enterEmail();
 		login.continueToNextPage();
 		login.enterPassword();

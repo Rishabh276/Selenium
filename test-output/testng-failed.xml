@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.AssignmentSelenium.tests.LoginTest">
+      <class name="com.AssignmentSelenium.tests.SearchMenShoesTest">
         <methods>
+          <include name="productSearch"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.AssignmentSelenium.tests.LoginTest -->
+      </class> <!-- com.AssignmentSelenium.tests.SearchMenShoesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
