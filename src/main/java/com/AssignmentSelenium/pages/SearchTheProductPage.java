@@ -29,7 +29,10 @@ public class SearchTheProductPage {
 	@FindBy(how=How.XPATH , using = "//*[@id=\"sobe_d_b_3_2\"]/a/div/img")
 	public WebElement clickWomenTshirts;
 	
-	@FindBy(how = How.XPATH , using = "/html/body/div[1]/div[2]/div[1]/div[1]/div/span[3]/div[2]/div[2]/div/div/div/div/div[2]/div[1]/h2/a/span")
+	/*@FindBy(how = How.XPATH , using = "/html/body/div[1]/div[2]/div[1]/div[1]/div/span[3]/div[2]/div[2]/div/div/div/div/div[2]/div[1]/h2/a/span")
+	public WebElement clickTshirts;*/
+	
+	@FindBy(how=How.XPATH , using = "//a[@title='JUNEBERRY® Tie Dye Half Sleeve Regular Fit T-Shirt for Women/Girls']//div[@class='a-section octopus-pc-item-hue-shield octopus-pc-item-image-background-v3']")
 	public WebElement clickTshirts;
 	
 	@FindBy(how = How.ID , using = "twotabsearchtextbox")
@@ -73,10 +76,16 @@ public class SearchTheProductPage {
 		return clickTshirts.getText();
 	}
 	
-	public void enterSearchBox() {
+	/*public void enterSearchBox() {
 		
 		clickSearchBox.sendKeys("Amazon Brand - Symbol Women's Solid Regular Fit Half Sleeve T-Shirt (RN-PO2-COMBO30_Mustard &amp; Burnt Orange_S) (Combo Pack of 2)");
+	}*/
+	
+	public void enterSearchBox() {
+		
+		clickSearchBox.sendKeys("JUNEBERRY® Tie Dye Half Sleeve Regular Fit T-Shirt for Women/Girls");
 	}
+
 	
 	public void enterSubmit() {
 		

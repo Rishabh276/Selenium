@@ -1,11 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="rounak@0609"/>
+  <parameter name="invalidemail" value="rounakbanerjee327@gmail.com"/>
+  <parameter name="validemail" value="6295907017"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.AssignmentSelenium.tests.SearchElectronicsTest">
+        <methods>
+          <include name="endReport"/>
+          <include name="openBrowser"/>
+          <include name="ElectronicsSearch"/>
+          <include name="endTest"/>
+          <include name="setExtent"/>
+          <include name="startTest"/>
+          <include name="closeBrowser"/>
+          <include name="initializeWebdriver"/>
+        </methods>
+      </class> <!-- com.AssignmentSelenium.tests.SearchElectronicsTest -->
+      <class name="com.AssignmentSelenium.tests.SearchMenShoesTest">
+        <methods>
+          <include name="endReport"/>
+          <include name="openBrowser"/>
+          <include name="menShoesSearch"/>
+          <include name="endTest"/>
+          <include name="setExtent"/>
+          <include name="startTest"/>
+          <include name="closeBrowser"/>
+          <include name="initializeWebdriver"/>
+        </methods>
+      </class> <!-- com.AssignmentSelenium.tests.SearchMenShoesTest -->
+      <class name="com.AssignmentSelenium.tests.SearchTheProductTest">
+        <methods>
+          <include name="endReport"/>
+          <include name="openBrowser"/>
+          <include name="productSearch"/>
+          <include name="endTest"/>
+          <include name="setExtent"/>
+          <include name="startTest"/>
+          <include name="closeBrowser"/>
+          <include name="initializeWebdriver"/>
+        </methods>
+      </class> <!-- com.AssignmentSelenium.tests.SearchTheProductTest -->
+      <class name="com.AssignmentSelenium.tests.NewReleasesTest">
+        <methods>
+          <include name="endReport"/>
+          <include name="openBrowser"/>
+          <include name="endTest"/>
+          <include name="setExtent"/>
+          <include name="NewReleases"/>
+          <include name="startTest"/>
+          <include name="closeBrowser"/>
+          <include name="initializeWebdriver"/>
+        </methods>
+      </class> <!-- com.AssignmentSelenium.tests.NewReleasesTest -->
+      <class name="com.AssignmentSelenium.tests.LoginTest">
+        <methods>
+          <include name="endReport"/>
+          <include name="openBrowser"/>
+          <include name="inValidLogin" invocation-numbers="0"/>
+          <include name="endTest"/>
+          <include name="setExtent"/>
+          <include name="startTest"/>
+          <include name="closeBrowser"/>
+          <include name="initializeWebdriver"/>
+        </methods>
+      </class> <!-- com.AssignmentSelenium.tests.LoginTest -->
+      <class name="com.AssignmentSelenium.tests.ChangeCountryTest">
+        <methods>
+          <include name="endReport"/>
+          <include name="openBrowser"/>
+          <include name="endTest"/>
+          <include name="setExtent"/>
+          <include name="ChangeCountry"/>
+          <include name="startTest"/>
+          <include name="closeBrowser"/>
+          <include name="initializeWebdriver"/>
+        </methods>
+      </class> <!-- com.AssignmentSelenium.tests.ChangeCountryTest -->
       <class name="com.AssignmentSelenium.tests.RegisterTest">
         <methods>
+          <include name="endReport"/>
           <include name="register"/>
+          <include name="openBrowser"/>
+          <include name="endTest"/>
+          <include name="setExtent"/>
+          <include name="startTest"/>
+          <include name="closeBrowser"/>
+          <include name="initializeWebdriver"/>
         </methods>
       </class> <!-- com.AssignmentSelenium.tests.RegisterTest -->
     </classes>

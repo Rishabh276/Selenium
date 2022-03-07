@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.AssignmentSelenium.pages.SearchElectronicsPage;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class SearchElectronicsTest extends BaseTest{
 	
@@ -21,6 +22,7 @@ public class SearchElectronicsTest extends BaseTest{
 		String outputExpected = driver.getTitle().split(":")[1].trim();
 		
 		Assert.assertEquals(outputActual, outputExpected);
+		extentTest.log(LogStatus.PASS, "Search Electronics test case passed successfully");
 		}
 
 }

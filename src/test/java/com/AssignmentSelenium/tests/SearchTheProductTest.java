@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.AssignmentSelenium.pages.SearchTheProductPage;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class SearchTheProductTest extends BaseTest {
 	
@@ -15,7 +16,6 @@ public class SearchTheProductTest extends BaseTest {
 		searchProduct.hoverWomanFashion();
 		searchProduct.enterClothing();
 		searchProduct.enterWomenTshirts();
-		//searchProduct.enterTshirts();
 		searchProduct.enterSearchBox();
 		searchProduct.enterSubmit();
 		
@@ -23,12 +23,11 @@ public class SearchTheProductTest extends BaseTest {
 		String outputExpected = driver.getTitle().split("-")[1].trim();
 		outputExpected = outputExpected.substring(7);
 		
-		//System.out.println(outputExpected  + " " + outputActual);
 		boolean check = outputActual.contains(outputExpected);
-		//System.out.println(check);
 		
 		
 		Assert.assertTrue(check);
+		extentTest.log(LogStatus.PASS, "Search the Product test case passed successfully");
 		}
 
 }

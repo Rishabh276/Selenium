@@ -19,9 +19,6 @@ import org.openqa.selenium.support.PageFactory;
 	@FindBy(how = How.XPATH , using = "//*[@id=\"nav-link-accountList\"]")
 	public WebElement accountSign;
 	
-	/*@FindBy(how = How.XPATH , using = "//div[@id=\"nav-link-accountList\"]")
-	public WebElement f;*/
-	
 	@FindBy(how = How.XPATH , using = "//*[@id=\"ap_email\"]")
 	public WebElement loginEmail;
 	
@@ -34,15 +31,18 @@ import org.openqa.selenium.support.PageFactory;
 	@FindBy(how = How.XPATH , using = "//*[@id=\"signInSubmit\"]")
 	public WebElement submitSignIn;
 	
+	@FindBy(how = How.XPATH , using = "//*[@id=\"nav-link-accountList\"]/div")
+	public WebElement userCheck;
+	
 	
 	public void enterSignInButton() {
 		
 		accountSign.click();
 	}
 	
-	public void enterEmail() {
+	public void enterEmail(String user) {
 		
-		loginEmail.sendKeys("6295907017");
+		loginEmail.sendKeys(user);
 	}
 	
     public void continueToNextPage() {
@@ -50,9 +50,9 @@ import org.openqa.selenium.support.PageFactory;
 		nextPage.click();
 	}
 	
-	public void enterPassword() {
+	public void enterPassword(String pass) {
 		
-		loginPassword.sendKeys("rounak@0609");
+		loginPassword.sendKeys(pass);
 	}
 	
 	public void signIn() {

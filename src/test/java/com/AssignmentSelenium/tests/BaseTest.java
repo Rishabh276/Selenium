@@ -4,17 +4,24 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
 public class BaseTest {
 
 	static WebDriver driver;
+	public static ExtentReports extent;
+	public static ExtentTest extentTest;
 	static File file = new File("./resources/config.properties");
 	static FileInputStream fis = null;
 	static Properties prop = new Properties();
@@ -34,8 +41,33 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	@BeforeSuite
+	public void setExtent() {
+			
+		extent = new ExtentReports("./Reports/ExtentReport.html");
+	}
+	
+	@BeforeMethod
+	public void startTest(Method method) {
+		
+		extentTest = extent.startTest(method.getName());
+	}
+	
+	@AfterMethod
+	public void endTest() {
+		
+		extent.endTest(extentTest);
+	}
+	
+	@AfterSuite
+	public void endReport() {
+		extent.flush();
+		extent.close();
+	}
 
-	@Test
+	@BeforeSuite
 	public static void initializeWebdriver() {
 		// Set the path for chromeDriver
 		System.setProperty(prop.getProperty("chromedriverProperty"), prop.getProperty("chromedriverPath"));
@@ -44,7 +76,7 @@ public class BaseTest {
 		driver.manage().window().maximize();
 	}
 
-	@Test
+	@BeforeMethod
 	public static void openBrowser() {
 
 		driver.get(prop.getProperty("Url"));
@@ -52,7 +84,7 @@ public class BaseTest {
 
 	@AfterSuite
 	public static void closeBrowser() {
-		driver.close();
+		driver.quit();
 
 	}
 }

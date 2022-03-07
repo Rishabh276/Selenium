@@ -4,11 +4,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.AssignmentSelenium.pages.SearchMobilePage;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class SearchMobileTest extends BaseTest{
 	
 	@Test
-	public void productSearch() {
+	public void mobileSearch() {
 		
 		SearchMobilePage searchProduct = new SearchMobilePage(driver);
 		searchProduct.enterMobile();
@@ -21,12 +22,10 @@ public class SearchMobileTest extends BaseTest{
 		
 		String[] outputActual = driver.getTitle().split(":");
 		String actual = outputActual[1].trim();
-		
 		String outputExpected = searchProduct.checkingTheElement();
-		//System.out.println(outputActual);
-		//System.out.println("..............................................................");
-		//System.out.println(outputExpected);
+		
 		Assert.assertEquals(actual, outputExpected);
+		extentTest.log(LogStatus.PASS, "Search Mobile test case passed successfully");
 		}
 
 }

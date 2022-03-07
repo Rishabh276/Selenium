@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<parameter name="validemail" value="6295907017"/>
+<parameter name="password" value="rounak@0609"/>
+<parameter name="invalidemail" value="rounakbanerjee327@gmail.com"/>
+
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.AssignmentSelenium.tests.SearchMenShoesTest"/>
+      <class name="com.AssignmentSelenium.tests.NewReleasesTest"/>
+      <class name="com.AssignmentSelenium.tests.PrimeVideoLoginTest"/>
+      <class name="com.AssignmentSelenium.tests.SearchTheProductTest"/>
+      <class name="com.AssignmentSelenium.tests.SearchMobileTest"/>
+      <class name="com.AssignmentSelenium.tests.BooksTest"/>
+      <class name="com.AssignmentSelenium.tests.ChangeCountryTest"/>
+      <class name="com.AssignmentSelenium.tests.SearchElectronicsTest"/>
+      <class name="com.AssignmentSelenium.tests.RegisterTest"/>
+      <class name="com.AssignmentSelenium.tests.FireTVTest"/>
+      <class name="com.AssignmentSelenium.tests.BestSellerTest"/>
+	  <class name="com.AssignmentSelenium.tests.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
