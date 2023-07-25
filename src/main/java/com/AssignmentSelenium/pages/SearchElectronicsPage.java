@@ -27,7 +27,8 @@ WebDriver driver;
 	@FindBy(how=How.XPATH , using = "//*[@id=\"acs-product-block-1\"]/div[1]/a/img")
 	public WebElement clickProduct;
 	
-	@FindBy(how=How.XPATH , using = "/html/body/div[1]/div[2]/div[1]/div[1]/div/span[3]/div[2]/div[3]/div/div/div/div/div/div[2]/div/div/div[1]/h2/a/span")
+	/*
+	@FindBy(how=How.XPATH , using = "//span[@id='productTitle']")
 	public WebElement chosenProduct;
 	
 	
@@ -41,7 +42,7 @@ WebDriver driver;
 	
 	@FindBy(how = How.XPATH , using = "//*[@id=\"nav-xshop\"]/a[6]")
 	public WebElement checkTheElement;
-	
+	*/
 	
 	
 	
@@ -61,15 +62,15 @@ WebDriver driver;
 		clickProduct.click();
 	}
 	
-	
-	public String getTheElement() {
+}	
+	/*public String getTheElement() {
 		
 		return chosenProduct.getText();
 	}
 	
 	public void enterSearchBox() {
 		
-		clickSearchBox.sendKeys("boAt Airdopes 121v2 True Wireless Earbuds with Upto 14 Hours Playback, Lightweight Earbuds, 8MM Drivers, LED Indicators and Multifunction Controls(Active Black)");
+		clickSearchBox.sendKeys("        Jabra Elite 2 in Ear True Wireless Earbuds – with 21 Hours of Battery, 2 Built-in Microphones for Clear Calls, Rich Bass and Comfortable fit - Navy       ");
 	}
 	
 	public void enterSubmit() {
@@ -86,3 +87,4 @@ WebDriver driver;
 		return checkTheElement.getText();
 	}
 }
+*/

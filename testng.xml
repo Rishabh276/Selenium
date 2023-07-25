@@ -6,6 +6,10 @@
 <parameter name="password" value="rounak@0609"/>
 <parameter name="invalidemail" value="rounakbanerjee327@gmail.com"/>
 
+<!--<listeners>
+     <listener class-name="ExtentReport.ExtentReport"></listener>
+	</listeners>-->
+
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.AssignmentSelenium.tests.SearchMenShoesTest"/>
